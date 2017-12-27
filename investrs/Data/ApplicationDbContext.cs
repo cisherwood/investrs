@@ -15,6 +15,10 @@ namespace investrs.Data
         {
         }
 
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Item> Item { get; set; }
+        public DbSet<ItemPriceHistory> ItemPriceHistory { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

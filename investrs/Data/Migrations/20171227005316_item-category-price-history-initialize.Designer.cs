@@ -8,9 +8,10 @@ using investrs.Data;
 namespace investrs.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171227005316_item-category-price-history-initialize")]
+    partial class itemcategorypricehistoryinitialize
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
@@ -88,19 +89,15 @@ namespace investrs.Data.Migrations
 
                     b.Property<int>("CategoryID");
 
-                    b.Property<string>("Description")
-                        .HasMaxLength(1000);
+                    b.Property<string>("Description");
 
-                    b.Property<string>("Icon")
-                        .HasMaxLength(500);
+                    b.Property<string>("Icon");
 
-                    b.Property<string>("IconLarge")
-                        .HasMaxLength(500);
+                    b.Property<string>("IconLarge");
 
                     b.Property<bool>("IsMembersItem");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(500);
+                    b.Property<string>("Name");
 
                     b.HasKey("ItemID");
 
