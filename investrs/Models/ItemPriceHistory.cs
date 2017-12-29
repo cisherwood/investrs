@@ -14,8 +14,10 @@ namespace investrs.Models
         [ForeignKey("Item")]
         public int ItemID { get; set; }
         public DateTime Date { get; set; }
-        public int Price { get; set; } // GE Market price "daily"
+        public int DailyPrice { get; set; } // GE Market price "daily"
         public int AveragePrice { get; set; } // Provided calculated trend price "average
+        [MaxLength(64)]
+        public string DayOfWeek { get; set; } 
 
         public virtual Item Item { get; set; }
 

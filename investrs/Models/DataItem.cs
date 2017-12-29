@@ -60,7 +60,7 @@ namespace investrs.Models
         public string Trend { get; set; }
 
         [JsonProperty("price")]
-        public long Price { get; set; }
+        public string Price { get; set; }
     }
 
     public partial class Day

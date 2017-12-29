@@ -11,6 +11,7 @@ namespace investrs.Models
     {
         [Key]
         public int ItemID { get; set; }
+        public int ApiID { get; set; } // ID of item supplied by source API
         [ForeignKey("Category")]
         public int CategoryID { get; set; }
 

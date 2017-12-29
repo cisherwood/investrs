@@ -8,9 +8,10 @@ using investrs.Data;
 namespace investrs.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171229134908_item-price-history-dailyprice")]
+    partial class itempricehistorydailyprice
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
@@ -121,9 +122,6 @@ namespace investrs.Data.Migrations
                     b.Property<int>("DailyPrice");
 
                     b.Property<DateTime>("Date");
-
-                    b.Property<string>("DayOfWeek")
-                        .HasMaxLength(64);
 
                     b.Property<int>("ItemID");
 
